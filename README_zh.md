@@ -11,13 +11,18 @@
 <p align="center">
   <img src="./examples/sample-itsr-mastermind.png"
        alt="CCTI 示例卡 — ITSR · 主谋(The Mastermind)"
-       width="540" />
+       width="46%" />
+  &nbsp;&nbsp;
+  <img src="./examples/sample-ftsr-yolo.png"
+       alt="CCTI 示例卡 — FTSR · Yolo 王(The Yolo)"
+       width="46%" />
 </p>
 
-> 上图:一段真实的 Claude Code 长会话跑出的卡,用户最终归属
-> **ITSR · 主谋(The Mastermind)**,S+ 档。英文名下面那行
-> 「`「下一个」是你的语气词`」是该型的**一行画像**。8 项学术指标和
-> 8 个刻画级数据填满剩余画面。
+> 两张样卡并排:
+> **左** — `ITSR · 主谋(The Mastermind)`,S+ 档,来自一段长会话,用户全程下短指令派活。
+> **右** — `FTSR · Yolo 王(The Yolo)`,A 档,「先 push 再说」的实战派。
+> 4 字母编码(`ITSR` / `FTSR`)做成 outline badge,跟 Tier badge 并排显示,
+> 一眼能认型。
 
 ## ⏳ 在长会话里用
 

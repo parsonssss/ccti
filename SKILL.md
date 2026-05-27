@@ -90,6 +90,7 @@ Fill `assets/template.html`. Placeholders (use Python `str.replace`, not Jinja):
 | `{{NAME_CN_FULL}}` | full `name_cn` |
 | `{{NAME_EN}}` | archetype `name_en` |
 | `{{TAGLINE}}` | archetype `tagline` (one-line behavioral picture, e.g. "「下一个」是你的语气词") |
+| `{{CODE}}` | the 4-letter archetype code itself (e.g. `ITSR`, `FTSR`) — shown as a small outline badge next to the tier |
 | `{{TIER}}` | computed tier (`S+` / `S` / `A` / `B` / `C`) |
 | `{{EXPLANATION}}` | archetype `explanation` (already contains `<strong>` if any) |
 | `{{D1_SCORE}}` ... `{{D8_SCORE}}` | dimension scores (e.g. `9.2`), in order: task_clarity, product_thinking, diagnostics, technical_decisions, iteration_cadence, agent_collaboration, context_provision, engineering_discipline |

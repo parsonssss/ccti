@@ -35,6 +35,8 @@
   .persona-en { font-size: 19px; font-weight: 800; letter-spacing: 0.22em; color: var(--muted); }
   .persona-tagline { font-size: 18px; color: rgba(255,255,255,0.78); letter-spacing: 0.01em; line-height: 1.35; font-weight: 500; }
   .persona-tagline::before { content: "— "; color: var(--green); margin-right: 2px; font-weight: 700; }
+  .persona-badges { display: inline-flex; align-items: center; gap: 10px; }
+  .code-badge { display: inline-block; padding: 4px 12px; background: transparent; color: var(--green); font-size: 16px; font-weight: 900; letter-spacing: 0.22em; border: 1.5px solid var(--green); border-radius: 4px; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
   .tier-badge { display: inline-block; padding: 5px 14px; background: var(--green); color: #0a0a0a; font-size: 18px; font-weight: 900; letter-spacing: 0.06em; border-radius: 4px; }
 
   .character-wrap { margin-top: 26px; display: flex; justify-content: center; align-items: center; background: var(--bg2); border: 1px solid var(--line); border-radius: 16px; padding: 12px 0 8px; position: relative; overflow: hidden; }
@@ -78,7 +80,10 @@
     <div class="persona-tier">
       <div class="persona-en">{{NAME_EN}}</div>
       <div class="persona-tagline">{{TAGLINE}}</div>
-      <div class="tier-badge">{{TIER}}&nbsp;TIER</div>
+      <div class="persona-badges">
+        <span class="code-badge">{{CODE}}</span>
+        <span class="tier-badge">{{TIER}}&nbsp;TIER</span>
+      </div>
     </div>
   </div>
 

@@ -12,13 +12,19 @@
 <p align="center">
   <img src="./examples/sample-itsr-mastermind.png"
        alt="Sample CCTI card — ITSR · The Mastermind"
-       width="540" />
+       width="46%" />
+  &nbsp;&nbsp;
+  <img src="./examples/sample-ftsr-yolo.png"
+       alt="Sample CCTI card — FTSR · The Yolo"
+       width="46%" />
 </p>
 
-> Above: an actual CCTI card from a long-running Claude Code session — the
-> user landed on **ITSR · 主谋(The Mastermind)** at S+ tier. The line below
-> the English name (`「下一个」是你的语气词`) is the type's one-line *picture*.
-> 8 academic dimension bars and 8 signature-move stat tiles fill out the rest.
+> Two sample cards side-by-side:
+> **Left** — `ITSR · 主谋(The Mastermind)` at S+ tier, generated from a
+> long-running session where the user mostly dispatched short commands.
+> **Right** — `FTSR · Yolo 王(The Yolo)` at A tier, the archetypal
+> "ship-it-then-fix-it" coder. The 4-letter code badge (`ITSR` / `FTSR`)
+> sits beside the tier badge so the type is identifiable at a glance.
 
 ## ⏳ Use it in a long-running session
 
