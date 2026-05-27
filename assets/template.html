@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1420px; }
+  :root {
+    --bg: #0a0a0a;
+    --bg2: #121212;
+    --fg: #ffffff;
+    --muted: rgba(255,255,255,0.5);
+    --line: rgba(255,255,255,0.08);
+    --green: #5aff8c;
+    --green-soft: rgba(90, 255, 140, 0.18);
+  }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    padding: 48px 64px 40px;
+    position: relative;
+  }
+  .slogan-row { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+  .slogan { font-size: 30px; font-weight: 700; color: var(--fg); letter-spacing: -0.01em; }
+  .slogan::before { content: "「"; color: var(--green); margin-right: 2px; }
+  .slogan::after { content: "」"; color: var(--green); margin-left: 2px; }
+  .brand { font-size: 13px; font-weight: 800; color: var(--muted); letter-spacing: 0.25em; display: inline-flex; align-items: center; gap: 8px; }
+  .brand-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; box-shadow: 0 0 10px var(--green); }
+
+  .persona { margin-top: 26px; display: flex; align-items: flex-end; gap: 24px; }
+  .persona-name { font-size: 200px; font-weight: 900; line-height: 0.88; letter-spacing: -0.04em; color: var(--fg); }
+  .persona-name .accent { color: var(--green); }
+  .persona-tier { margin-bottom: 18px; display: inline-flex; flex-direction: column; align-items: flex-start; gap: 8px; max-width: 520px; }
+  .persona-en { font-size: 19px; font-weight: 800; letter-spacing: 0.22em; color: var(--muted); }
+  .persona-tagline { font-size: 18px; color: rgba(255,255,255,0.78); letter-spacing: 0.01em; line-height: 1.35; font-weight: 500; }
+  .persona-tagline::before { content: "— "; color: var(--green); margin-right: 2px; font-weight: 700; }
+  .tier-badge { display: inline-block; padding: 5px 14px; background: var(--green); color: #0a0a0a; font-size: 18px; font-weight: 900; letter-spacing: 0.06em; border-radius: 4px; }
+
+  .character-wrap { margin-top: 26px; display: flex; justify-content: center; align-items: center; background: var(--bg2); border: 1px solid var(--line); border-radius: 16px; padding: 12px 0 8px; position: relative; overflow: hidden; }
+  .character-wrap::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 32px 32px; pointer-events: none; }
+  .character-wrap svg { display: block; position: relative; z-index: 1; }
+  .scene-label { position: absolute; top: 12px; left: 16px; font-size: 11px; letter-spacing: 0.3em; color: var(--muted); font-weight: 800; z-index: 2; }
+  .scene-corner { position: absolute; bottom: 12px; right: 16px; font-size: 11px; letter-spacing: 0.25em; color: var(--green); font-weight: 800; z-index: 2; }
+
+  .explain { margin-top: 26px; background: var(--bg2); border-left: 3px solid var(--green); padding: 18px 22px; font-size: 20px; line-height: 1.6; color: rgba(255,255,255,0.85); border-radius: 0 12px 12px 0; }
+  .explain strong { color: var(--green); font-weight: 700; }
+
+  .section-title { margin-top: 28px; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 800; letter-spacing: 0.3em; color: var(--muted); margin-bottom: 14px; }
+  .section-title::before { content: ""; width: 24px; height: 2px; background: var(--green); }
+
+  .indicators { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; }
+  .ind { display: flex; flex-direction: column; gap: 4px; }
+  .ind-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .ind-name { font-size: 18px; color: rgba(255,255,255,0.88); font-weight: 600; }
+  .ind-score { font-size: 18px; font-weight: 900; color: var(--green); font-variant-numeric: tabular-nums; }
+  .ind-bar { height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
+  .ind-fill { height: 100%; background: var(--green); box-shadow: 0 0 8px rgba(90,255,140,0.55); }
+
+  .stats { margin-top: 8px; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+  .stat { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 16px 14px; position: relative; overflow: hidden; }
+  .stat::before { content: ""; position: absolute; top: 0; left: 0; width: 32px; height: 2px; background: var(--green); }
+  .stat-value { font-size: 36px; font-weight: 900; color: var(--green); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .stat-label { margin-top: 8px; font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.4; }
+
+  .footer { margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-size: 12px; letter-spacing: 0.2em; color: var(--muted); }
+  .footer .tag { color: var(--green); font-weight: 800; }
+</style>
+</head>
+<body>
+  <div class="slogan-row">
+    <div class="slogan">{{SLOGAN}}</div>
+    <div class="brand"><span class="brand-dot"></span>CCTI&nbsp;·&nbsp;CLAUDE&nbsp;CODE&nbsp;TYPE&nbsp;INDICATOR</div>
+  </div>
+
+  <div class="persona">
+    <div class="persona-name">{{NAME_CN_HEAD}}<span class="accent">{{NAME_CN_TAIL}}</span></div>
+    <div class="persona-tier">
+      <div class="persona-en">{{NAME_EN}}</div>
+      <div class="persona-tagline">{{TAGLINE}}</div>
+      <div class="tier-badge">{{TIER}}&nbsp;TIER</div>
+    </div>
+  </div>
+
+  <div class="character-wrap">
+    <div class="scene-label">FIG. 01 — {{NAME_CN_FULL}}型用户行为剖面</div>
+    <div class="scene-corner">// dispatching commands</div>
+    <svg width="720" height="260" viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="180" cy="80" rx="42" ry="50"/>
+        <path d="M 142 60 Q 150 32 180 32 Q 215 32 218 60"/>
+        <line x1="168" y1="75" x2="180" y2="76" stroke-width="3"/>
+        <line x1="195" y1="76" x2="207" y2="76" stroke-width="3"/>
+        <path d="M 188 88 L 192 105 L 186 109"/>
+        <path d="M 174 118 Q 186 124 198 118"/>
+        <line x1="165" y1="128" x2="163" y2="148"/>
+        <line x1="200" y1="128" x2="202" y2="148"/>
+        <path d="M 100 250 L 110 168 Q 120 152 165 148 L 200 148 Q 245 152 255 168 L 265 250"/>
+        <path d="M 148 155 L 182 210 L 218 155"/>
+        <line x1="178" y1="210" x2="178" y2="250"/>
+        <line x1="186" y1="210" x2="186" y2="250"/>
+        <path d="M 255 168 L 320 158 L 380 152 L 430 152"/>
+        <path d="M 430 152 L 470 150 M 466 145 Q 470 150 466 155"/>
+      </g>
+      <g stroke="#5aff8c" stroke-width="3.5" stroke-linecap="round" fill="none">
+        <line x1="478" y1="150" x2="538" y2="150"/>
+        <path d="M 528 140 L 540 150 L 528 160"/>
+      </g>
+      <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" font-weight="700">
+        <g>
+          <rect x="555" y="50"  width="135" height="34" rx="6" fill="none" stroke="#5aff8c" stroke-width="1.8"/>
+          <text x="568" y="72" fill="#5aff8c">{{CMD_1}}</text>
+        </g>
+        <g opacity="0.75">
+          <rect x="555" y="100" width="135" height="34" rx="6" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+          <text x="568" y="122" fill="#ffffff">{{CMD_2}}</text>
+        </g>
+        <g>
+          <rect x="555" y="150" width="135" height="34" rx="6" fill="#5aff8c" stroke="none"/>
+          <text x="568" y="172" fill="#0a0a0a">{{CMD_3}}</text>
+        </g>
+        <g opacity="0.6">
+          <rect x="555" y="200" width="135" height="34" rx="6" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+          <text x="568" y="222" fill="#ffffff">{{CMD_4}}</text>
+        </g>
+      </g>
+      <g stroke="#5aff8c" stroke-width="1" stroke-dasharray="3 4" fill="none" opacity="0.45">
+        <path d="M 540 150 Q 555 80 600 67"/>
+        <path d="M 540 150 Q 555 118 600 117"/>
+        <path d="M 540 150 L 600 167"/>
+        <path d="M 540 150 Q 555 200 600 217"/>
+      </g>
+      <g stroke="#5aff8c" stroke-width="1.5" fill="none">
+        <path d="M 38 38 L 38 22 L 54 22"/>
+        <path d="M 682 222 L 682 238 L 666 238"/>
+      </g>
+      <circle cx="180" cy="18" r="6" fill="#5aff8c"/>
+      <line x1="180" y1="6" x2="180" y2="-2" stroke="#5aff8c" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="explain">{{EXPLANATION}}</div>
+
+  <div class="section-title">语义化指标 / SEMANTIC&nbsp;METRICS</div>
+  <div class="indicators">
+    <div class="ind"><div class="ind-head"><span class="ind-name">任务表达清晰度</span><span class="ind-score">{{D1_SCORE}}</span></div><div class="ind-bar"><div class="ind-fill" style="width:{{D1_PCT}}%"></div></div></div>
+    <div class="ind"><div class="ind-head"><span class="ind-name">产品思维</span><span class="ind-score">{{D2_SCORE}}</span></div><div class="ind-bar"><div class="ind-fill" style="width:{{D2_PCT}}%"></div></div></div>
+    <div class="ind"><div class="ind-head"><span class="ind-name">问题诊断能力</span><span class="ind-score">{{D3_SCORE}}</span></div><div class="ind-bar"><div class="ind-fill" style="width:{{D3_PCT}}%"></div></div></div>
+    <div class="ind"><div class="ind-head"><span class="ind-name">技术决策</span><span class="ind-score">{{D4_SCORE}}</span></div><div class="ind-bar"><div class="ind-fill" style="width:{{D4_PCT}}%"></div></div></div>
+    <div class="ind"><div class="ind-head"><span class="ind-name">迭代节奏</span><span class="ind-score">{{D5_SCORE}}</span></div><div class="ind-bar"><div class="ind-fill" style="width:{{D5_PCT}}%"></div></div></div>
+    <div class="ind"><div class="ind-head"><span class="ind-name">代理协作意识</span><span class="ind-score">{{D6_SCORE}}</span></div><div class="ind-bar"><div class="ind-fill" style="width:{{D6_PCT}}%"></div></div></div>
+    <div class="ind"><div class="ind-head"><span class="ind-name">上下文提供</span><span class="ind-score">{{D7_SCORE}}</span></div><div class="ind-bar"><div class="ind-fill" style="width:{{D7_PCT}}%"></div></div></div>
+    <div class="ind"><div class="ind-head"><span class="ind-name">工程规范意识</span><span class="ind-score">{{D8_SCORE}}</span></div><div class="ind-bar"><div class="ind-fill" style="width:{{D8_PCT}}%"></div></div></div>
+  </div>
+
+  <div class="section-title">刻画级 / SIGNATURE&nbsp;MOVES</div>
+  <div class="stats">
+    <div class="stat"><div class="stat-value">{{S1_VALUE}}</div><div class="stat-label">{{S1_LABEL}}</div></div>
+    <div class="stat"><div class="stat-value">{{S2_VALUE}}</div><div class="stat-label">{{S2_LABEL}}</div></div>
+    <div class="stat"><div class="stat-value">{{S3_VALUE}}</div><div class="stat-label">{{S3_LABEL}}</div></div>
+    <div class="stat"><div class="stat-value">{{S4_VALUE}}</div><div class="stat-label">{{S4_LABEL}}</div></div>
+    <div class="stat"><div class="stat-value">{{S5_VALUE}}</div><div class="stat-label">{{S5_LABEL}}</div></div>
+    <div class="stat"><div class="stat-value">{{S6_VALUE}}</div><div class="stat-label">{{S6_LABEL}}</div></div>
+    <div class="stat"><div class="stat-value">{{S7_VALUE}}</div><div class="stat-label">{{S7_LABEL}}</div></div>
+    <div class="stat"><div class="stat-value">{{S8_VALUE}}</div><div class="stat-label">{{S8_LABEL}}</div></div>
+  </div>
+
+  <div class="footer">
+    <div>#CCTI · CLAUDE_CODE_TYPE_INDICATOR · {{YEAR}}</div>
+    <div class="tag">VIBE&nbsp;CODING&nbsp;文学</div>
+  </div>
+</body>
+</html>

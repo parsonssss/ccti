@@ -1,0 +1,210 @@
+{
+  "version": "1.1",
+  "axes": {
+    "F_vs_I": {
+      "label": "下场度",
+      "F": {"label": "Field Commander", "desc": "亲自下场写实现"},
+      "I": {"label": "Idea Person", "desc": "只下指令,不写实现"}
+    },
+    "T_vs_V": {
+      "label": "沟通密度",
+      "T": {"label": "Terse", "desc": "简短直球"},
+      "V": {"label": "Verbose", "desc": "长上下文,带解释"}
+    },
+    "S_vs_M": {
+      "label": "节奏",
+      "S": {"label": "Sprint", "desc": "冲刺型"},
+      "M": {"label": "Marathon", "desc": "长跑型,慢工出活"}
+    },
+    "P_vs_R": {
+      "label": "验证倾向",
+      "P": {"label": "Paranoid", "desc": "事事验证"},
+      "R": {"label": "Reckless", "desc": "yolo 派"}
+    }
+  },
+
+  "dimensions": [
+    {"key": "task_clarity",         "name_cn": "任务表达清晰度", "name_en": "Task Clarity"},
+    {"key": "product_thinking",     "name_cn": "产品思维",       "name_en": "Product Thinking"},
+    {"key": "diagnostics",          "name_cn": "问题诊断能力",   "name_en": "Diagnostics"},
+    {"key": "technical_decisions",  "name_cn": "技术决策",       "name_en": "Tech Decisions"},
+    {"key": "iteration_cadence",    "name_cn": "迭代节奏",       "name_en": "Iteration Cadence"},
+    {"key": "agent_collaboration",  "name_cn": "代理协作意识",   "name_en": "Agent Collab"},
+    {"key": "context_provision",    "name_cn": "上下文提供",     "name_en": "Context Provision"},
+    {"key": "engineering_discipline","name_cn": "工程规范意识",  "name_en": "Engineering Discipline"}
+  ],
+
+  "archetypes": {
+    "FTSP": {
+      "name_cn": "稽查官",
+      "name_en": "THE INSPECTOR",
+      "tagline": "每行 diff 都要审、不验证不放心",
+      "tier": "S",
+      "slogan": "不验证,不松手",
+      "explanation": "你亲手敲代码,Claude 是副驾。短指令、快节奏,但每个 commit 前你都把 diff 翻一遍。<strong>「跑过测试了吗」</strong>是你出场最高的口头禅。",
+      "accent_lines": ["$ 改这里", "$ git diff", "$ test ?", "$ 通过"]
+    },
+    "FTSR": {
+      "name_cn": "Yolo 王",
+      "name_en": "THE YOLO",
+      "tagline": "不读 diff 直接 git push",
+      "tier": "A",
+      "slogan": "先 push 再说",
+      "explanation": "你亲手写,跑得飞快,不爱验证。Claude 帮你打字,你只关心<strong>「跑得起来吗」</strong>。线上挂了再修 — 你信 hotfix 文化。",
+      "accent_lines": ["$ 跑", "$ 下一个", "$ git push -f", "$ 改天再测"]
+    },
+    "FTMP": {
+      "name_cn": "冷面铁匠",
+      "name_en": "THE SMITH",
+      "tagline": "一行代码改 8 遍直到顺眼",
+      "tier": "S",
+      "slogan": "慢一点,做对一次",
+      "explanation": "你亲手敲,慢工细活,每一行都要可解释、可验证。Claude 是你「副笔」 — 给你出多个备选,你挑、改、再 review,最后才入主线。",
+      "accent_lines": ["$ 列方案", "$ 再来一版", "$ 这版好", "$ 入主线"]
+    },
+    "FTMR": {
+      "name_cn": "摸鱼大师",
+      "name_en": "THE SLACKER",
+      "tagline": "自己写,但永远赶在下班前才 push",
+      "tier": "B",
+      "slogan": "随手写,看心情",
+      "explanation": "你亲手敲,但节奏全凭心情,也不太验证。Claude 是你摸鱼时的玩伴,大部分时候靠手感,偶尔问一句。<strong>「先这样」</strong>是你的结束语。",
+      "accent_lines": ["$ 试试", "$ 还行", "$ 改天再说", "$ 先这样"]
+    },
+    "FVSP": {
+      "name_cn": "学究",
+      "name_en": "THE SCHOLAR",
+      "tagline": "prompt 像 RFC 文档,跑得还飞快",
+      "tier": "A",
+      "slogan": "讲清楚,跑得飞起",
+      "explanation": "你亲手写,prompt 给得详细到能当文档。Claude 拿到的是论文级输入,所以输出也准 — 你拿到结果立刻验证,一个 session 推十几个 commit。",
+      "accent_lines": ["$ 参考 RFC", "$ 改这里", "$ 验过", "$ 入主线"]
+    },
+    "FVSR": {
+      "name_cn": "主播",
+      "name_en": "THE STREAMER",
+      "tagline": "边写边直播,完美主义但不测",
+      "tier": "B",
+      "slogan": "边敲边讲,跑就行",
+      "explanation": "你亲手写,边写边给 Claude 旁白,速度极快,但不验证。Claude 是你的「直播弹幕」,你享受过程胜过结果。",
+      "accent_lines": ["$ 看这里", "$ 加这段", "$ 跑", "$ 完美(没测)"]
+    },
+    "FVMP": {
+      "name_cn": "保姆",
+      "name_en": "THE CAREGIVER",
+      "tagline": "每条 prompt 800 字解释上下文",
+      "tier": "S",
+      "slogan": "讲透,再做一遍",
+      "explanation": "你亲手写,且对 Claude 极其耐心。每条 prompt 都先铺背景、说目的、给约束、给例子。Claude 在你这是个「博士新生」,你一遍一遍教。",
+      "accent_lines": ["$ 背景:...", "$ 因为...", "$ 应该这样", "$ 不对再来"]
+    },
+    "FVMR": {
+      "name_cn": "论文人",
+      "name_en": "THE THEORIST",
+      "tagline": "讨论 2 小时,代码 8 行",
+      "tier": "B",
+      "slogan": "想得清,跑得慢",
+      "explanation": "你亲手写,但更爱「讨论该不该写」。Claude 跟你像在写论文 — 大量思辨,少量落地。<strong>「这里要不要重构一下」</strong>是你的口头禅。",
+      "accent_lines": ["$ 假设...", "$ 推一下", "$ 略", "$ TODO"]
+    },
+    "ITSP": {
+      "name_cn": "总监",
+      "name_en": "THE DIRECTOR",
+      "tagline": "短指令 + 每条都扫 diff",
+      "tier": "S+",
+      "slogan": "只下指令,但每条都验",
+      "explanation": "你不亲手敲,但每条 reply 都会扫 diff。Claude 是你的下属,而你是个挑剔的 reviewer — 节奏快、但不放过任何一行。",
+      "accent_lines": ["$ 这样改", "$ 跑测试", "$ 看 diff", "$ 合并"]
+    },
+    "ITSR": {
+      "name_cn": "主谋",
+      "name_en": "THE MASTERMIND",
+      "tagline": "「下一个」是你的语气词",
+      "tier": "S+",
+      "slogan": "不写代码,只写决定",
+      "explanation": "你不亲自下场。半句话能讲清楚的事,绝不写一句。Claude 在你眼里不是工具,是<strong>下属</strong> — 你下指令、他出方案;你拍板、他执行;你读 git log,他写 diff。跟你打字几小时,有种<strong>在跟老板开会</strong>的错觉。",
+      "accent_lines": ["$ 下一个 →", "$ 按这个改", "$ 这个不要", "$ commit"]
+    },
+    "ITMP": {
+      "name_cn": "策划官",
+      "name_en": "THE STRATEGIST",
+      "tagline": "每周开一次「人机对齐会」",
+      "tier": "S",
+      "slogan": "短指令,慢推进,常复核",
+      "explanation": "你不亲手敲,推进有节奏,每个节点都回头复核。Claude 在你这像「执行型 PM」 — 节拍清楚,但你不催。",
+      "accent_lines": ["$ 第一步", "$ 看进度", "$ 复核", "$ 下一阶段"]
+    },
+    "ITMR": {
+      "name_cn": "远程老板",
+      "name_en": "THE REMOTE BOSS",
+      "tagline": "你看着办,我下班了",
+      "tier": "A",
+      "slogan": "大方向定好,你自己跑",
+      "explanation": "你不亲手敲,慢慢来,基本不验证。Claude 是你的远程下属 — 你给个大方向,他全权操作,你偶尔抽查。<strong>「ok 你来」</strong>是你的最高指示。",
+      "accent_lines": ["$ 看你的", "$ 自己来", "$ 没问题", "$ ok"]
+    },
+    "IVSP": {
+      "name_cn": "教练",
+      "name_en": "THE COACH",
+      "tagline": "「why」讲透,每条都验",
+      "tier": "S",
+      "slogan": "讲透 why,跑得飞快",
+      "explanation": "你不亲手敲,但每条指令都附 context + 理由 + 边界。Claude 拿到的是带 spec 的 PRD,所以输出快且准 — 你也每条都验。",
+      "accent_lines": ["$ 背景:...", "$ 因为 X", "$ 边界:...", "$ 验过 ok"]
+    },
+    "IVSR": {
+      "name_cn": "灵感发射器",
+      "name_en": "THE SPARK",
+      "tagline": "改 3 次需求最后回到第一版",
+      "tier": "A",
+      "slogan": "灵感先发射,实现再说",
+      "explanation": "你不亲手敲,长篇大论给灵感,Claude 接住一个算一个。<strong>你换需求比 Claude 出方案快</strong> — 一个 session 改三轮方向,最后常常回到第一版。",
+      "accent_lines": ["$ 我想到...", "$ 试试 X", "$ 不对,改成 Y", "$ 还是 X 吧"]
+    },
+    "IVMP": {
+      "name_cn": "导师",
+      "name_en": "THE MENTOR",
+      "tagline": "给 Claude 布置题、批 draft、打回重写",
+      "tier": "S",
+      "slogan": "讲清楚 + 验透彻",
+      "explanation": "你不亲手敲,长 prompt + 严验证。Claude 在你这是个「博士生」 — 你布置题、给参考、读 draft、给反馈,一遍一遍。",
+      "accent_lines": ["$ 题目:...", "$ 参考 docs", "$ 不通过", "$ 再来一稿"]
+    },
+    "IVMR": {
+      "name_cn": "画饼大师",
+      "name_en": "THE VISIONARY",
+      "tagline": "战略 PPT 比代码长",
+      "tier": "A",
+      "slogan": "大方向,长周期",
+      "explanation": "你不亲手敲,讲战略多过战术,慢慢来,不抠细节。Claude 是你的「执行长」 — 你画蓝图、他落地。<strong>「先看大方向对不对」</strong>是你的开场白。",
+      "accent_lines": ["$ 三年规划", "$ 大方向", "$ 你看着", "$ 见进度"]
+    }
+  },
+
+  "signature_stat_templates": [
+    {"id": "convo_density", "value_by": "F_vs_I",
+     "F": {"value": "1.8×", "label": "与 Claude 对话密度\\nvs 与同事"},
+     "I": {"value": "3.2×", "label": "与 Claude 对话密度\\nvs 与同事"}},
+    {"id": "next_freq", "value_by": "S_vs_M",
+     "S": {"value": "1/8", "label": "每 8 条消息出现\\n一次「下一个」"},
+     "M": {"value": "1/24", "label": "每 24 条消息出现\\n一次「下一个」"}},
+    {"id": "wait_patience", "value_by": "P_vs_R",
+     "P": {"value": "12 次", "label": "等 Claude 思考\\n超过 30 秒"},
+     "R": {"value": "0 次", "label": "等 Claude 思考\\n超过 30 秒"}},
+    {"id": "iter_speed", "value_by": "S_vs_M",
+     "S": {"value": "7.4×", "label": "迭代速度\\nvs 普通用户"},
+     "M": {"value": "1.6×", "label": "迭代速度\\nvs 普通用户"}},
+    {"id": "prompt_len", "value_by": "T_vs_V",
+     "T": {"value": "13 字", "label": "单条 prompt\\n中位长度"},
+     "V": {"value": "210 字", "label": "单条 prompt\\n中位长度"}},
+    {"id": "reply_interval", "value_by": "S_vs_M",
+     "S": {"value": "3 秒", "label": "看完回复后\\n发下一条的间隔"},
+     "M": {"value": "1.4 分", "label": "看完回复后\\n发下一条的间隔"}},
+    {"id": "pleasantries", "value_by": "T_vs_V",
+     "T": {"value": "0 句", "label": "说过「谢谢」\\n或「麻烦你」"},
+     "V": {"value": "6 句", "label": "说过「谢谢」\\n或「麻烦你」"}},
+    {"id": "imperative_ratio", "value_by": "T_vs_V",
+     "T": {"value": "96%", "label": "命令句体占比\\n(不带「请/能否」)"},
+     "V": {"value": "62%", "label": "陈述+提问句占比\\n(带 why/how)"}}
+  ]
+}

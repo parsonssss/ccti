@@ -1,0 +1,17 @@
+# Skill-generated cards (per-user output)
+output/
+*.png
+*.pdf
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
