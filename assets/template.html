@@ -67,6 +67,8 @@
 
   .footer { margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-size: 12px; letter-spacing: 0.2em; color: var(--muted); }
   .footer .tag { color: var(--green); font-weight: 800; }
+  .footer .url { color: var(--green); font-weight: 800; letter-spacing: 0.06em; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; }
+  .footer .url::before { content: "→ "; color: var(--green); }
 </style>
 </head>
 <body>
@@ -171,7 +173,8 @@
   </div>
 
   <div class="footer">
-    <div>#CCTI · CLAUDE_CODE_TYPE_INDICATOR · {{YEAR}}</div>
+    <div class="url">github.com/parsonssss/ccti</div>
+    <div>#CCTI · {{YEAR}}</div>
     <div class="tag">VIBE&nbsp;CODING&nbsp;文学</div>
   </div>
 </body>
