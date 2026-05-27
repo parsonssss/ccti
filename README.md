@@ -10,21 +10,24 @@
 > SBTI-style aesthetic.
 
 <p align="center">
-  <img src="./examples/sample-itsr-mastermind.png"
-       alt="Sample CCTI card — ITSR · The Mastermind"
-       width="46%" />
+  <img src="./examples/sample-itsr-mastermind.png" alt="ITSR · The Mastermind" width="46%" />
   &nbsp;&nbsp;
-  <img src="./examples/sample-ftsr-yolo.png"
-       alt="Sample CCTI card — FTSR · The Yolo"
-       width="46%" />
+  <img src="./examples/sample-ftsr-yolo.png" alt="FTSR · The Yolo" width="46%" />
+</p>
+<p align="center">
+  <img src="./examples/sample-fvmp-caregiver.png" alt="FVMP · The Caregiver" width="46%" />
+  &nbsp;&nbsp;
+  <img src="./examples/sample-ivsr-spark.png" alt="IVSR · The Spark" width="46%" />
 </p>
 
-> Two sample cards side-by-side:
-> **Left** — `ITSR · 主谋(The Mastermind)` at S+ tier, generated from a
-> long-running session where the user mostly dispatched short commands.
-> **Right** — `FTSR · Yolo 王(The Yolo)` at A tier, the archetypal
-> "ship-it-then-fix-it" coder. The 4-letter code badge (`ITSR` / `FTSR`)
-> sits beside the tier badge so the type is identifiable at a glance.
+> Four sample cards, four very different archetypes — note how the
+> right-side SVG illustration is unique to each type:
+> **ITSR · 主谋** dispatches a stack of `$ 下一个 →` commands;
+> **FTSR · Yolo 王** has fire + a giant `PUSH ⚡` button (force-push to main);
+> **FVMP · 保姆** holds a huge speech bubble of context comments;
+> **IVSR · 灵感发射器** glows with a light-bulb + sparks.
+> The 4-letter code badge (`ITSR` / `FTSR` / `FVMP` / `IVSR`) sits beside
+> the tier so the type is identifiable at a glance.
 
 ## ⏳ Use it in a long-running session
 

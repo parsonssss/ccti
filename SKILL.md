@@ -97,7 +97,7 @@ Fill `assets/template.html`. Placeholders (use Python `str.replace`, not Jinja):
 | `{{D1_PCT}}` ... `{{D8_PCT}}` | same scores × 10 (the bar widths in percent — e.g. `92` for 9.2) |
 | `{{S1_VALUE}}` ... `{{S8_VALUE}}` | signature stat values |
 | `{{S1_LABEL}}` ... `{{S8_LABEL}}` | signature stat labels (`\n` as literal `\n` → renders as line break via `<br>` doesn't apply here, use `<br>` substitution — see below) |
-| `{{CMD_1}}` ... `{{CMD_4}}` | archetype `accent_lines` |
+| `{{SVG_SCENE}}` | archetype `svg_scene` — full SVG fragment for the right-side illustration (motif unique to each type: magnifying glass for Inspector, fire+PUSH for Yolo, hammer+anvil for Smith, etc.) |
 | `{{YEAR}}` | current year, four digits |
 
 **Note on `\n` in stat labels:** if a label has `\n`, replace it with `<br>`

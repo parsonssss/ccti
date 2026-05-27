@@ -9,20 +9,23 @@
 > 8 个刻画级行为标签,黑白绿极简风,SBTI 同款基因。
 
 <p align="center">
-  <img src="./examples/sample-itsr-mastermind.png"
-       alt="CCTI 示例卡 — ITSR · 主谋(The Mastermind)"
-       width="46%" />
+  <img src="./examples/sample-itsr-mastermind.png" alt="ITSR · 主谋" width="46%" />
   &nbsp;&nbsp;
-  <img src="./examples/sample-ftsr-yolo.png"
-       alt="CCTI 示例卡 — FTSR · Yolo 王(The Yolo)"
-       width="46%" />
+  <img src="./examples/sample-ftsr-yolo.png" alt="FTSR · Yolo 王" width="46%" />
+</p>
+<p align="center">
+  <img src="./examples/sample-fvmp-caregiver.png" alt="FVMP · 保姆" width="46%" />
+  &nbsp;&nbsp;
+  <img src="./examples/sample-ivsr-spark.png" alt="IVSR · 灵感发射器" width="46%" />
 </p>
 
-> 两张样卡并排:
-> **左** — `ITSR · 主谋(The Mastermind)`,S+ 档,来自一段长会话,用户全程下短指令派活。
-> **右** — `FTSR · Yolo 王(The Yolo)`,A 档,「先 push 再说」的实战派。
-> 4 字母编码(`ITSR` / `FTSR`)做成 outline badge,跟 Tier badge 并排显示,
-> 一眼能认型。
+> 4 张样卡 · 4 种完全不同的人格 — 注意右侧 SVG 场景**每型都不一样**:
+> **ITSR · 主谋** 派出一摞 `$ 下一个 →` 命令栈;
+> **FTSR · Yolo 王** 火焰 + 巨大 `PUSH ⚡` 按钮(force-push to main);
+> **FVMP · 保姆** 抱着一个巨型语境注释气泡;
+> **IVSR · 灵感发射器** 灯泡发光 + 四周火花。
+> 4 字母编码(`ITSR` / `FTSR` / `FVMP` / `IVSR`)做成 outline badge,跟 Tier 并排,
+> 一眼认型。
 
 ## ⏳ 在长会话里用
 

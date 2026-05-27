@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "axes": {
     "F_vs_I": {
       "label": "下场度",
@@ -42,7 +42,7 @@
       "tier": "S",
       "slogan": "不验证,不松手",
       "explanation": "你亲手敲代码,Claude 是副驾。短指令、快节奏,但每个 commit 前你都把 diff 翻一遍。<strong>「跑过测试了吗」</strong>是你出场最高的口头禅。",
-      "accent_lines": ["$ 改这里", "$ git diff", "$ test ?", "$ 通过"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2\" fill=\"none\"><rect x=\"495\" y=\"55\" width=\"190\" height=\"130\" rx=\"4\"/><line x1=\"495\" y1=\"78\" x2=\"685\" y2=\"78\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"12\" font-weight=\"700\"><text x=\"506\" y=\"73\" fill=\"#ffffff\" opacity=\"0.5\">audit.diff</text><text x=\"506\" y=\"100\" fill=\"#5aff8c\">+ ok</text><text x=\"506\" y=\"122\" fill=\"#ff5aaa\">- wat</text><text x=\"506\" y=\"144\" fill=\"#ffffff\" opacity=\"0.6\">  hmm</text><text x=\"506\" y=\"166\" fill=\"#ffb86b\">! 怀疑</text></g><g stroke=\"#5aff8c\" stroke-width=\"3.5\" fill=\"none\"><circle cx=\"605\" cy=\"170\" r=\"36\"/><line x1=\"630\" y1=\"195\" x2=\"680\" y2=\"235\" stroke-linecap=\"round\"/></g>"
     },
     "FTSR": {
       "name_cn": "Yolo 王",
@@ -51,7 +51,7 @@
       "tier": "A",
       "slogan": "先 push 再说",
       "explanation": "你亲手写,跑得飞快,不爱验证。Claude 帮你打字,你只关心<strong>「跑得起来吗」</strong>。线上挂了再修 — 你信 hotfix 文化。",
-      "accent_lines": ["$ 跑", "$ 下一个", "$ git push -f", "$ 改天再测"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" fill=\"#5aff8c\" fill-opacity=\"0.20\"><path d=\"M 510 200 Q 480 165 510 130 Q 518 158 540 142 Q 530 170 558 158 Q 552 195 528 210 Q 516 215 510 200 Z\"/></g><g><rect x=\"575\" y=\"115\" width=\"115\" height=\"60\" rx=\"10\" fill=\"#5aff8c\"/><text x=\"590\" y=\"154\" font-family=\"-apple-system, sans-serif\" font-size=\"24\" font-weight=\"900\" fill=\"#0a0a0a\">PUSH ⚡</text></g><g font-family=\"ui-monospace, monospace\" font-size=\"11\" font-weight=\"800\" fill=\"#ff5aaa\"><text x=\"572\" y=\"200\">! force-push to main</text></g>"
     },
     "FTMP": {
       "name_cn": "冷面铁匠",
@@ -60,7 +60,7 @@
       "tier": "S",
       "slogan": "慢一点,做对一次",
       "explanation": "你亲手敲,慢工细活,每一行都要可解释、可验证。Claude 是你「副笔」 — 给你出多个备选,你挑、改、再 review,最后才入主线。",
-      "accent_lines": ["$ 列方案", "$ 再来一版", "$ 这版好", "$ 入主线"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"500\" y1=\"55\" x2=\"610\" y2=\"175\"/></g><g><rect x=\"480\" y=\"35\" width=\"55\" height=\"28\" rx=\"3\" fill=\"#5aff8c\"/></g><g stroke=\"#5aff8c\" stroke-width=\"3\" fill=\"none\" stroke-linejoin=\"round\"><path d=\"M 540 215 L 695 215 L 670 235 L 565 235 Z\"/><line x1=\"560\" y1=\"215\" x2=\"560\" y2=\"245\"/><line x1=\"675\" y1=\"215\" x2=\"675\" y2=\"245\"/></g><g stroke=\"#ffb86b\" stroke-width=\"2.5\" stroke-linecap=\"round\"><line x1=\"610\" y1=\"175\" x2=\"628\" y2=\"158\"/><line x1=\"610\" y1=\"175\" x2=\"635\" y2=\"185\"/><line x1=\"610\" y1=\"175\" x2=\"610\" y2=\"200\"/><line x1=\"610\" y1=\"175\" x2=\"588\" y2=\"188\"/><line x1=\"610\" y1=\"175\" x2=\"598\" y2=\"160\"/></g>"
     },
     "FTMR": {
       "name_cn": "摸鱼大师",
@@ -69,7 +69,7 @@
       "tier": "B",
       "slogan": "随手写,看心情",
       "explanation": "你亲手敲,但节奏全凭心情,也不太验证。Claude 是你摸鱼时的玩伴,大部分时候靠手感,偶尔问一句。<strong>「先这样」</strong>是你的结束语。",
-      "accent_lines": ["$ 试试", "$ 还行", "$ 改天再说", "$ 先这样"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\" opacity=\"0.85\"><path d=\"M 555 55 Q 548 70 555 90 Q 560 105 555 120\"/><path d=\"M 590 50 Q 583 70 590 95 Q 597 115 590 130\"/><path d=\"M 625 55 Q 618 70 625 90 Q 630 105 625 120\"/></g><g stroke=\"#5aff8c\" stroke-width=\"3\" fill=\"none\" stroke-linejoin=\"round\" stroke-linecap=\"round\"><path d=\"M 510 135 L 510 215 Q 510 235 535 235 L 635 235 Q 660 235 660 215 L 660 135 Z\"/><path d=\"M 660 155 Q 690 155 690 190 Q 690 215 660 215\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"11\" font-weight=\"700\" fill=\"#5aff8c\" opacity=\"0.6\"><text x=\"527\" y=\"183\">// brb</text></g>"
     },
     "FVSP": {
       "name_cn": "学究",
@@ -78,7 +78,7 @@
       "tier": "A",
       "slogan": "讲清楚,跑得飞起",
       "explanation": "你亲手写,prompt 给得详细到能当文档。Claude 拿到的是论文级输入,所以输出也准 — 你拿到结果立刻验证,一个 session 推十几个 commit。",
-      "accent_lines": ["$ 参考 RFC", "$ 改这里", "$ 验过", "$ 入主线"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2.5\" fill=\"none\"><rect x=\"495\" y=\"180\" width=\"195\" height=\"35\" rx=\"2\" fill=\"#5aff8c\" fill-opacity=\"0.18\"/><rect x=\"510\" y=\"140\" width=\"180\" height=\"35\" rx=\"2\"/><rect x=\"495\" y=\"100\" width=\"195\" height=\"35\" rx=\"2\" fill=\"#5aff8c\" fill-opacity=\"0.18\"/><rect x=\"515\" y=\"60\" width=\"175\" height=\"35\" rx=\"2\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"13\" font-weight=\"800\" fill=\"#5aff8c\"><text x=\"525\" y=\"83\">RFC 9001</text><text x=\"506\" y=\"123\">RFC 2616</text><text x=\"522\" y=\"163\">SICP</text><text x=\"506\" y=\"203\">TAOCP vol.3</text></g>"
     },
     "FVSR": {
       "name_cn": "主播",
@@ -87,7 +87,7 @@
       "tier": "B",
       "slogan": "边敲边讲,跑就行",
       "explanation": "你亲手写,边写边给 Claude 旁白,速度极快,但不验证。Claude 是你的「直播弹幕」,你享受过程胜过结果。",
-      "accent_lines": ["$ 看这里", "$ 加这段", "$ 跑", "$ 完美(没测)"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"><rect x=\"576\" y=\"55\" width=\"38\" height=\"82\" rx=\"19\"/><path d=\"M 558 128 Q 558 168 595 168 Q 632 168 632 128\"/><line x1=\"595\" y1=\"168\" x2=\"595\" y2=\"200\"/><line x1=\"570\" y1=\"200\" x2=\"620\" y2=\"200\"/></g><g stroke=\"#5aff8c\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\" opacity=\"0.85\"><path d=\"M 510 75 Q 521 105 510 135\"/><path d=\"M 495 70 Q 510 110 495 150\"/><path d=\"M 681 75 Q 670 105 681 135\"/><path d=\"M 696 70 Q 681 110 696 150\"/></g><g><circle cx=\"655\" cy=\"68\" r=\"5\" fill=\"#ff5aaa\"/><text x=\"665\" y=\"73\" font-family=\"ui-monospace, monospace\" font-size=\"12\" font-weight=\"900\" fill=\"#ff5aaa\">LIVE</text></g>"
     },
     "FVMP": {
       "name_cn": "保姆",
@@ -96,7 +96,7 @@
       "tier": "S",
       "slogan": "讲透,再做一遍",
       "explanation": "你亲手写,且对 Claude 极其耐心。每条 prompt 都先铺背景、说目的、给约束、给例子。Claude 在你这是个「博士新生」,你一遍一遍教。",
-      "accent_lines": ["$ 背景:...", "$ 因为...", "$ 应该这样", "$ 不对再来"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2\" fill=\"none\"><rect x=\"492\" y=\"40\" width=\"205\" height=\"195\" rx=\"10\"/><path d=\"M 492 85 L 478 95 L 492 105\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"11\" font-weight=\"600\" fill=\"#5aff8c\"><text x=\"505\" y=\"63\">// 背景:</text><text x=\"515\" y=\"78\" opacity=\"0.7\">系统是这样的...</text><text x=\"505\" y=\"100\">// 目标:</text><text x=\"515\" y=\"115\" opacity=\"0.7\">你要做的事情...</text><text x=\"505\" y=\"137\">// 约束:</text><text x=\"515\" y=\"152\" opacity=\"0.7\">不要改 X,只改 Y...</text><text x=\"505\" y=\"174\">// 例子:</text><text x=\"515\" y=\"189\" opacity=\"0.7\">参考 commit abc123</text><text x=\"505\" y=\"217\" opacity=\"0.5\">// (再附 4 张截图)</text></g>"
     },
     "FVMR": {
       "name_cn": "论文人",
@@ -105,7 +105,7 @@
       "tier": "B",
       "slogan": "想得清,跑得慢",
       "explanation": "你亲手写,但更爱「讨论该不该写」。Claude 跟你像在写论文 — 大量思辨,少量落地。<strong>「这里要不要重构一下」</strong>是你的口头禅。",
-      "accent_lines": ["$ 假设...", "$ 推一下", "$ 略", "$ TODO"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2\" fill=\"none\"><rect x=\"495\" y=\"55\" width=\"200\" height=\"170\" rx=\"4\"/></g><g fill=\"#5aff8c\"><text x=\"518\" y=\"108\" font-family=\"Georgia, serif\" font-size=\"30\" font-weight=\"700\">∀x ∃y</text><text x=\"518\" y=\"148\" font-family=\"Georgia, serif\" font-size=\"24\">f(x) → y</text><text x=\"518\" y=\"183\" font-family=\"Georgia, serif\" font-size=\"18\">⊢ correctness</text></g><g font-family=\"ui-monospace, monospace\" font-size=\"11\" fill=\"#5aff8c\" opacity=\"0.6\"><text x=\"518\" y=\"212\">(证明 8 页 · 代码 0 行)</text></g>"
     },
     "ITSP": {
       "name_cn": "总监",
@@ -114,7 +114,7 @@
       "tier": "S+",
       "slogan": "只下指令,但每条都验",
       "explanation": "你不亲手敲,但每条 reply 都会扫 diff。Claude 是你的下属,而你是个挑剔的 reviewer — 节奏快、但不放过任何一行。",
-      "accent_lines": ["$ 这样改", "$ 跑测试", "$ 看 diff", "$ 合并"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2\" fill=\"none\"><rect x=\"495\" y=\"50\" width=\"200\" height=\"180\" rx=\"6\"/><line x1=\"495\" y1=\"75\" x2=\"695\" y2=\"75\"/></g><g><circle cx=\"507\" cy=\"63\" r=\"3.5\" fill=\"#ff5aaa\"/><circle cx=\"520\" cy=\"63\" r=\"3.5\" fill=\"#ffb86b\"/><circle cx=\"533\" cy=\"63\" r=\"3.5\" fill=\"#5aff8c\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"12\" font-weight=\"700\"><text x=\"505\" y=\"100\" fill=\"#ffffff\" opacity=\"0.5\">diff --git a/x b/x</text><text x=\"505\" y=\"125\" fill=\"#5aff8c\">+ ok</text><text x=\"505\" y=\"147\" fill=\"#ff5aaa\">- nope</text><text x=\"505\" y=\"169\" fill=\"#ffffff\" opacity=\"0.6\">  context</text><text x=\"505\" y=\"191\" fill=\"#5aff8c\">+ retry</text><text x=\"505\" y=\"213\" fill=\"#5aff8c\">+ merge ✓</text></g>"
     },
     "ITSR": {
       "name_cn": "主谋",
@@ -123,7 +123,7 @@
       "tier": "S+",
       "slogan": "不写代码,只写决定",
       "explanation": "你不亲自下场。半句话能讲清楚的事,绝不写一句。Claude 在你眼里不是工具,是<strong>下属</strong> — 你下指令、他出方案;你拍板、他执行;你读 git log,他写 diff。跟你打字几小时,有种<strong>在跟老板开会</strong>的错觉。",
-      "accent_lines": ["$ 下一个 →", "$ 按这个改", "$ 这个不要", "$ commit"]
+      "svg_scene": "<g font-family=\"ui-monospace, monospace\" font-size=\"12\" font-weight=\"700\"><g><rect x=\"555\" y=\"45\" width=\"135\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#5aff8c\" stroke-width=\"1.8\"/><text x=\"568\" y=\"67\" fill=\"#5aff8c\">$ 下一个 →</text></g><g opacity=\"0.75\"><rect x=\"555\" y=\"95\" width=\"135\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"1.5\"/><text x=\"568\" y=\"117\" fill=\"#ffffff\">$ 按这个改</text></g><g><rect x=\"555\" y=\"145\" width=\"135\" height=\"34\" rx=\"6\" fill=\"#5aff8c\" stroke=\"none\"/><text x=\"568\" y=\"167\" fill=\"#0a0a0a\">$ 这个不要</text></g><g opacity=\"0.6\"><rect x=\"555\" y=\"195\" width=\"135\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"1.5\"/><text x=\"568\" y=\"217\" fill=\"#ffffff\">$ commit</text></g></g><g stroke=\"#5aff8c\" stroke-width=\"1\" stroke-dasharray=\"3 4\" fill=\"none\" opacity=\"0.45\"><path d=\"M 540 150 Q 555 75 555 62\"/><path d=\"M 540 150 Q 552 113 555 112\"/><path d=\"M 540 150 L 555 162\"/><path d=\"M 540 150 Q 555 195 555 212\"/></g>"
     },
     "ITMP": {
       "name_cn": "策划官",
@@ -132,7 +132,7 @@
       "tier": "S",
       "slogan": "短指令,慢推进,常复核",
       "explanation": "你不亲手敲,推进有节奏,每个节点都回头复核。Claude 在你这像「执行型 PM」 — 节拍清楚,但你不催。",
-      "accent_lines": ["$ 第一步", "$ 看进度", "$ 复核", "$ 下一阶段"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2.5\" fill=\"none\"><line x1=\"495\" y1=\"135\" x2=\"695\" y2=\"135\"/></g><g><circle cx=\"510\" cy=\"135\" r=\"11\" fill=\"#5aff8c\"/><circle cx=\"570\" cy=\"135\" r=\"11\" fill=\"#5aff8c\"/><circle cx=\"630\" cy=\"135\" r=\"11\" fill=\"none\" stroke=\"#5aff8c\" stroke-width=\"2.5\"/><circle cx=\"690\" cy=\"135\" r=\"11\" fill=\"none\" stroke=\"#5aff8c\" stroke-width=\"2.5\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"12\" font-weight=\"800\" fill=\"#5aff8c\"><text x=\"498\" y=\"108\">P1</text><text x=\"558\" y=\"108\">P2</text><text x=\"618\" y=\"108\" opacity=\"0.55\">P3</text><text x=\"678\" y=\"108\" opacity=\"0.55\">P4</text></g><g font-family=\"ui-monospace, monospace\" font-size=\"10\" fill=\"#5aff8c\" opacity=\"0.55\"><text x=\"494\" y=\"170\">done</text><text x=\"554\" y=\"170\">done</text><text x=\"616\" y=\"170\">wip</text><text x=\"672\" y=\"170\">queue</text></g>"
     },
     "ITMR": {
       "name_cn": "远程老板",
@@ -141,7 +141,7 @@
       "tier": "A",
       "slogan": "大方向定好,你自己跑",
       "explanation": "你不亲手敲,慢慢来,基本不验证。Claude 是你的远程下属 — 你给个大方向,他全权操作,你偶尔抽查。<strong>「ok 你来」</strong>是你的最高指示。",
-      "accent_lines": ["$ 看你的", "$ 自己来", "$ 没问题", "$ ok"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2\" fill=\"none\"><rect x=\"495\" y=\"55\" width=\"200\" height=\"160\" rx=\"8\"/></g><g><circle cx=\"506\" cy=\"68\" r=\"4\" fill=\"#ff5aaa\"/><text x=\"516\" y=\"73\" font-family=\"ui-monospace, monospace\" font-size=\"11\" font-weight=\"900\" fill=\"#ff5aaa\">REC</text></g><g stroke=\"#5aff8c\" stroke-width=\"2\" fill=\"none\"><circle cx=\"595\" cy=\"125\" r=\"30\"/><path d=\"M 562 175 Q 595 158 628 175\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"11\" font-weight=\"800\" fill=\"#5aff8c\" opacity=\"0.55\"><text x=\"503\" y=\"205\">// you're on mute</text></g>"
     },
     "IVSP": {
       "name_cn": "教练",
@@ -150,7 +150,7 @@
       "tier": "S",
       "slogan": "讲透 why,跑得飞快",
       "explanation": "你不亲手敲,但每条指令都附 context + 理由 + 边界。Claude 拿到的是带 spec 的 PRD,所以输出快且准 — 你也每条都验。",
-      "accent_lines": ["$ 背景:...", "$ 因为 X", "$ 边界:...", "$ 验过 ok"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"><rect x=\"510\" y=\"115\" width=\"85\" height=\"45\" rx=\"22\"/><line x1=\"595\" y1=\"137\" x2=\"625\" y2=\"120\"/></g><g><circle cx=\"547\" cy=\"137\" r=\"6\" fill=\"#5aff8c\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"13\" font-weight=\"800\" fill=\"#5aff8c\"><text x=\"495\" y=\"85\">WHY: 因为...</text><text x=\"495\" y=\"195\" opacity=\"0.7\">→ 边界: ...</text></g>"
     },
     "IVSR": {
       "name_cn": "灵感发射器",
@@ -159,7 +159,7 @@
       "tier": "A",
       "slogan": "灵感先发射,实现再说",
       "explanation": "你不亲手敲,长篇大论给灵感,Claude 接住一个算一个。<strong>你换需求比 Claude 出方案快</strong> — 一个 session 改三轮方向,最后常常回到第一版。",
-      "accent_lines": ["$ 我想到...", "$ 试试 X", "$ 不对,改成 Y", "$ 还是 X 吧"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"3\" fill=\"none\"><path d=\"M 580 135 Q 580 90 605 90 Q 630 90 630 135 Q 630 150 615 158 L 615 175 L 595 175 L 595 158 Q 580 150 580 135 Z\"/><line x1=\"595\" y1=\"183\" x2=\"615\" y2=\"183\" stroke-linecap=\"round\"/><line x1=\"598\" y1=\"192\" x2=\"612\" y2=\"192\" stroke-linecap=\"round\"/></g><g stroke=\"#5aff8c\" stroke-width=\"2.5\" stroke-linecap=\"round\"><line x1=\"540\" y1=\"60\" x2=\"555\" y2=\"75\"/><line x1=\"670\" y1=\"60\" x2=\"655\" y2=\"75\"/><line x1=\"525\" y1=\"110\" x2=\"542\" y2=\"110\"/><line x1=\"668\" y1=\"110\" x2=\"685\" y2=\"110\"/><line x1=\"540\" y1=\"195\" x2=\"555\" y2=\"180\"/><line x1=\"670\" y1=\"195\" x2=\"655\" y2=\"180\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"11\" font-weight=\"800\" fill=\"#5aff8c\" opacity=\"0.65\"><text x=\"550\" y=\"225\">// 我又想到一个</text></g>"
     },
     "IVMP": {
       "name_cn": "导师",
@@ -168,7 +168,7 @@
       "tier": "S",
       "slogan": "讲清楚 + 验透彻",
       "explanation": "你不亲手敲,长 prompt + 严验证。Claude 在你这是个「博士生」 — 你布置题、给参考、读 draft、给反馈,一遍一遍。",
-      "accent_lines": ["$ 题目:...", "$ 参考 docs", "$ 不通过", "$ 再来一稿"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2\" fill=\"none\"><rect x=\"495\" y=\"55\" width=\"200\" height=\"175\" rx=\"4\"/><line x1=\"510\" y1=\"83\" x2=\"680\" y2=\"83\" stroke-width=\"1\" opacity=\"0.5\"/><line x1=\"510\" y1=\"108\" x2=\"680\" y2=\"108\" stroke-width=\"1\" opacity=\"0.5\"/><line x1=\"510\" y1=\"133\" x2=\"680\" y2=\"133\" stroke-width=\"1\" opacity=\"0.5\"/><line x1=\"510\" y1=\"158\" x2=\"680\" y2=\"158\" stroke-width=\"1\" opacity=\"0.5\"/><line x1=\"510\" y1=\"183\" x2=\"680\" y2=\"183\" stroke-width=\"1\" opacity=\"0.5\"/></g><g stroke=\"#ff5aaa\" stroke-width=\"2.5\" stroke-linecap=\"round\" fill=\"none\"><line x1=\"520\" y1=\"78\" x2=\"675\" y2=\"90\"/><line x1=\"675\" y1=\"100\" x2=\"520\" y2=\"118\"/><path d=\"M 600 165 Q 615 168 628 158\"/></g><g><circle cx=\"655\" cy=\"205\" r=\"15\" fill=\"none\" stroke=\"#ff5aaa\" stroke-width=\"2.5\"/><line x1=\"648\" y1=\"200\" x2=\"662\" y2=\"212\" stroke=\"#ff5aaa\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"662\" y1=\"200\" x2=\"648\" y2=\"212\" stroke=\"#ff5aaa\" stroke-width=\"2.5\" stroke-linecap=\"round\"/></g>"
     },
     "IVMR": {
       "name_cn": "画饼大师",
@@ -177,34 +177,7 @@
       "tier": "A",
       "slogan": "大方向,长周期",
       "explanation": "你不亲手敲,讲战略多过战术,慢慢来,不抠细节。Claude 是你的「执行长」 — 你画蓝图、他落地。<strong>「先看大方向对不对」</strong>是你的开场白。",
-      "accent_lines": ["$ 三年规划", "$ 大方向", "$ 你看着", "$ 见进度"]
+      "svg_scene": "<g stroke=\"#5aff8c\" stroke-width=\"2\" fill=\"none\"><rect x=\"490\" y=\"45\" width=\"205\" height=\"140\" rx=\"4\"/></g><g><text x=\"525\" y=\"85\" font-family=\"-apple-system, sans-serif\" font-size=\"22\" font-weight=\"900\" fill=\"#5aff8c\">三年规划</text></g><g stroke=\"#5aff8c\" stroke-width=\"1\" opacity=\"0.55\"><line x1=\"505\" y1=\"100\" x2=\"605\" y2=\"100\"/><line x1=\"505\" y1=\"118\" x2=\"670\" y2=\"118\"/><line x1=\"505\" y1=\"136\" x2=\"580\" y2=\"136\"/><line x1=\"505\" y1=\"154\" x2=\"640\" y2=\"154\"/><line x1=\"505\" y1=\"172\" x2=\"620\" y2=\"172\"/></g><g stroke=\"#5aff8c\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"500\" y1=\"210\" x2=\"685\" y2=\"210\"/><path d=\"M 678 203 L 685 210 L 678 217\"/></g><g font-family=\"ui-monospace, monospace\" font-size=\"11\" font-weight=\"800\" fill=\"#5aff8c\" opacity=\"0.6\"><text x=\"500\" y=\"232\">slide 4 / 88</text></g>"
     }
-  },
-
-  "signature_stat_templates": [
-    {"id": "convo_density", "value_by": "F_vs_I",
-     "F": {"value": "1.8×", "label": "与 Claude 对话密度\\nvs 与同事"},
-     "I": {"value": "3.2×", "label": "与 Claude 对话密度\\nvs 与同事"}},
-    {"id": "next_freq", "value_by": "S_vs_M",
-     "S": {"value": "1/8", "label": "每 8 条消息出现\\n一次「下一个」"},
-     "M": {"value": "1/24", "label": "每 24 条消息出现\\n一次「下一个」"}},
-    {"id": "wait_patience", "value_by": "P_vs_R",
-     "P": {"value": "12 次", "label": "等 Claude 思考\\n超过 30 秒"},
-     "R": {"value": "0 次", "label": "等 Claude 思考\\n超过 30 秒"}},
-    {"id": "iter_speed", "value_by": "S_vs_M",
-     "S": {"value": "7.4×", "label": "迭代速度\\nvs 普通用户"},
-     "M": {"value": "1.6×", "label": "迭代速度\\nvs 普通用户"}},
-    {"id": "prompt_len", "value_by": "T_vs_V",
-     "T": {"value": "13 字", "label": "单条 prompt\\n中位长度"},
-     "V": {"value": "210 字", "label": "单条 prompt\\n中位长度"}},
-    {"id": "reply_interval", "value_by": "S_vs_M",
-     "S": {"value": "3 秒", "label": "看完回复后\\n发下一条的间隔"},
-     "M": {"value": "1.4 分", "label": "看完回复后\\n发下一条的间隔"}},
-    {"id": "pleasantries", "value_by": "T_vs_V",
-     "T": {"value": "0 句", "label": "说过「谢谢」\\n或「麻烦你」"},
-     "V": {"value": "6 句", "label": "说过「谢谢」\\n或「麻烦你」"}},
-    {"id": "imperative_ratio", "value_by": "T_vs_V",
-     "T": {"value": "96%", "label": "命令句体占比\\n(不带「请/能否」)"},
-     "V": {"value": "62%", "label": "陈述+提问句占比\\n(带 why/how)"}}
-  ]
+  }
 }
