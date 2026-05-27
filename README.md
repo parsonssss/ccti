@@ -1,11 +1,47 @@
 # CCTI · Claude Code Type Indicator
 
+> 🇨🇳 [中文版 README](./README_zh.md)
+
 > *"Are you 主谋(The Mastermind), 保姆(The Caregiver), or Yolo 王(The Yolo)?"*
 >
 > A Claude Code skill that reads how you collaborate with Claude in the current
 > session and renders a shareable 1080×1420 PNG personality card — 16 archetypes,
 > 8 academic dimension scores, 8 signature-move stats, black-white-green
 > SBTI-style aesthetic.
+
+<p align="center">
+  <img src="./examples/sample-itsr-mastermind.png"
+       alt="Sample CCTI card — ITSR · The Mastermind"
+       width="540" />
+</p>
+
+> Above: an actual CCTI card from a long-running Claude Code session — the
+> user landed on **ITSR · 主谋(The Mastermind)** at S+ tier. The line below
+> the English name (`「下一个」是你的语气词`) is the type's one-line *picture*.
+> 8 academic dimension bars and 8 signature-move stat tiles fill out the rest.
+
+## ⏳ Use it in a long-running session
+
+CCTI is a **behavioral** test, not a survey. Claude scores the user by what
+they actually did across the conversation — message length distribution,
+verb/noun ratios, "下一个" / "按这个改" frequency, verification rhythm, etc.
+That signal only gets reliable after enough samples.
+
+**Run CCTI near the end of a session that has run for a while.** Ideally:
+
+- ≥ 15 user messages
+- across ≥ 2 distinct kinds of work (e.g. bug fix + new feature, or refactor + docs)
+- with at least one moment where you push back / correct Claude
+
+In a short "hi, test me" session, the card is closer to a coin flip than a
+real read. The skill will still produce one — just less calibrated.
+
+A natural prompt at the right moment:
+
+> *"把今天这个会话当样本,跑一下 CCTI 看看我是哪种。"*
+> ("Use today's session as the sample and run CCTI on me.")
+
+---
 
 This README is written for **AI agents** (other Claude Code instances, agent
 frameworks, or developers building tooling on top of skills). For the

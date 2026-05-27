@@ -1,7 +1,11 @@
 # Skill-generated cards (per-user output)
 output/
+
+# Ignore PNGs/PDFs by default, except sample images in examples/
 *.png
 *.pdf
+!examples/*.png
+!examples/*.pdf
 
 # Python bytecode
 __pycache__/
